@@ -1,0 +1,142 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Courses - Rocket</title>
+
+{% endblock %}
+
+{% block content %}
+
+
+        <div id="courses">
+
+            <h1>Courses</h1>
+
+        </div>
+
+        <section id="cards">
+            
+
+            <article class="card change_borderst" id="starter">
+                
+                    <div class="card_title">
+
+                        <h1 id="title_starter">Starter</h1>
+
+                    </div>
+
+                    <div class="card_image">
+
+                        <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="Starter Logo" />
+
+                    </div>
+
+                    <div class="card_info">
+
+                        <p class="card_desc"> <strong id="strong_star">Become a desired programmer</strong> on the market with these free courses</p>
+
+                        <div class="card_grid">
+
+                            <p class="card_mod">5 modules</p>
+
+                            <p class="card_price">Free</p>
+
+                        </div>
+
+                    </div>
+
+            </article>
+
+            <article class="card change_borderla" id="launchbase">
+                
+                    <div class="card_title">
+
+                        <h1 id="title_launch">LaunchBase</h1>
+
+                    </div>
+
+                    <div class="card_image">
+
+                        <img id="image_launch" src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="Launch Base Logo" />
+
+                    </div>
+
+                    <div class="card_info">
+
+                        <p class="card_desc"> <strong id="strong_launch">Master programming from scratch</strong> and have access to the best opportunities in the market</p>
+
+                        <div class="card_grid">
+
+                            <p class="card_mod">7 modules</p>
+
+                            <p class="card_price">Paid out</p>
+
+                        </div>
+
+            </div>
+
+
+            </article>
+
+            <article class="card change_bordergo" id="gostack">
+                
+                    <div class="card_title">
+
+                        <h1 id="title_stack">GoStack</h1>
+
+                    </div>
+
+                    <div class="card_image">
+
+                        <img id="image_go" src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="GoStack Logo" />
+
+                    </div>
+
+                    <div class="card_info">
+
+                        <p class="card_desc"> <strong id="strong_stack">Immersive training</strong> in the most modern web and mobile development technologies</p>
+
+                        <div class="card_grid">
+
+                            <p class="card_mod">15 modules</p>
+
+                            <p class="card_price">Paid out</p>
+
+                        </div>
+                    </div>
+
+            </article>
+
+        </section>
+
+        <section class="full_modal">
+
+            <article class="modal">
+
+                <a class="close_modal">
+                    
+                    <i class="material-icons">close</i>
+
+                </a>
+
+                <a class="expand_modal">
+
+                    <i class="material-icons">aspect_ratio</i>
+
+                </a>
+
+                <div class="modal_content">
+
+                    <iframe src="" frameborder="0"></iframe>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}
