@@ -10,33 +10,29 @@
 
         <main id="wrapper">
             
-            <h1>Rocketseat</h1>
+            <h1>{{data.title}}</h1>
             
-            <a href="https://rocketseat.com.br/"><img src="assets/main_rocket.jpg" alt="Rocketseat logo" />
+            <a href="https://rocketseat.com.br/"><img src="assets/main_rocket.jpg" alt="{{data.title}} logo" />
             </a> 
 
-            <h2>Technology company</h2>
+            <h2>{{data.subTitle}}</h2>
 
-            <p>Brasilian company focused on the best market technologies and willing to carry its pupils to the <strong>next level</strong></p>
+            <p>{{data.info}}</p>
 
         </main>
         
         <section id="tecnologies">
 
-            <img src="assets/rocket_trofy.png" alt="rockettrofy" />
+            <img  {{data.tecImage}}/>
 
             <article class="container">
             
-                    <h1>The same tecnologies used by renowned companies in the market</h1>
+                    <h1>{{tecTitle}}</h1>
 
-                    <h2>Tecnologies:</h2>
+                    <h2>{{data.tecSubTitle}}</h2>
 
                     <ul>
-                        <li>React</li>
-                        <li>React Native</li>
-                        <li>Node</li>
-                        <li>JavaScript</li>
-                        <li>entre outras</li>
+                        {{data.tecs}}
                     </ul>
 
             </article>
