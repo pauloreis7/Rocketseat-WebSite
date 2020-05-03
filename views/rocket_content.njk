@@ -21,16 +21,25 @@
             {% for info in infos %}
 
                 <article class="{{info.class}}" id="{{info.id}}">
+
+                        
                     
-                        <div class="card_title">
+                        <div class="card_title {{ 'featured_wrapper' if info.featured }}">
 
                             {{info.title}}
+                            
+                            {% if info.featured %}
+
+                                <div class="featured">Featured</div>
+
+                            {% endif %}
 
                         </div>
 
                         <div class="card_image">
 
                             <img {{info.image}} />
+
 
                         </div>
 
@@ -51,32 +60,6 @@
                 </article>
 
             {% endfor %}
-
-        </section>
-
-        <section class="full_modal">
-
-            <article class="modal">
-
-                <a class="close_modal">
-                    
-                    <i class="material-icons">close</i>
-
-                </a>
-
-                <a class="expand_modal">
-
-                    <i class="material-icons">aspect_ratio</i>
-
-                </a>
-
-                <div class="modal_content">
-
-                    <iframe src="" frameborder="0"></iframe>
-
-                </div>
-
-            </article>
 
         </section>
 

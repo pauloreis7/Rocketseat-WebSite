@@ -10,7 +10,8 @@ server.set("view engine", "njk")
 
 nunjucks.configure("views", {
     express:server,
-    autoescape: false
+    autoescape: false,
+    noCache: true
 })
 
 server.get("/", function (req, res) {
@@ -31,10 +32,23 @@ server.get("/rocket_content", function (req, res) {
     return res.render("rocket_content", {infos})
 })
 
+server.get("/rocket_course/:id", function (req, res) {
+    const id = req.params.id
+
+    const info = infos.find(function(info) {
+
+        return info.id == id
+    })
+    
+    if (!info) {
+        return res.render("not-found")
+    }
+
+    return res.render("rocket_course", { info })
+})
+
 server.use(function(req, res) {
     res.status(404).render("not-found");
   });
 
-server.listen(5000, function () {
-    console.log("Rodouuu")
-})
+server.listen(5000)

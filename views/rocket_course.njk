@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+<title>Course - Rocket</title>
+
+{% endblock %}
+
+{% block content %}
+
+        <div id="courses-only">
+
+            <h1>{{info.title}}</h1>
+
+            <div class="click"><p>Click to get in!</p></div>
+        </div>
+
+        
+
+        <section id="course">
+
+                <article class="card_only" id="{{info.id}}">
+
+                        <div class="card_image-only">
+
+                            <img {{info.image}} />
+
+                        </div>
+
+                        <div class="card_info">
+
+                            <p class="card_desc only"> {{info.info}}</p>
+
+                            <div class="card_grid">
+
+                                <p class="card_mod">{{info.modules}}</p>
+
+                                <p class="card_price">{{info.price}}</p>
+
+                            </div>
+
+                        </div>
+
+                </article>
+
+        </section>
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}

@@ -1,27 +1,22 @@
-const modalFull = document.querySelector('.full_modal');
 const cards = document.querySelectorAll('.card')
-const modal = document.querySelector('.modal')
+const cardOnly = document.querySelector('.card_only')
 
 for (let card of cards) {
     card.addEventListener("click", function () {
         const courseId = card.getAttribute('id');
         
-        modalFull.classList.add('active')
-        modalFull.querySelector('iframe').src =`https://rocketseat.com.br/${courseId}`;
+        window.location.href = `http://localhost:5000/rocket_course/${courseId}`
     })
 }
 
-modalFull.querySelector('.close_modal').addEventListener("click", function () {
-    modalFull.classList.remove('active')
-    modalFull.querySelector('iframe').src =""
-    
-    modal.classList.remove('maximized')
+cardOnly.addEventListener("click", function () {
+    const id = cardOnly.getAttribute('id')
+
+    window.location.href = `https://rocketseat.com.br/${id}`
 })
 
-modalFull.querySelector('.expand_modal').addEventListener("click", function () {
-    if (modal.classList.contains('maximized')) {
-        modal.classList.remove('maximized')
-    } else {
-    modal.classList.add('maximized')
-    }
+document.querySelector(".click").addEventListener("click", function () {
+    const id = cardOnly.getAttribute('id')
+
+    window.location.href = `https://rocketseat.com.br/${id}`
 })
